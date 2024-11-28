@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Stock Management</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #019acd;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+            display: none; /* Hidden by default */
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input, select, button {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .message {
+            margin-top: 15px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            input, select, button {
+                font-size: 16px;
+                padding: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            input, select, button {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Login Page -->
+    <section class="container" id="loginPage">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button type="submit">Login</button>
+        </form>
+        <div class="message" id="loginMessage"></div>
+    </section>
+
+    <!-- Stock Management Page -->
+    <section class="container" id="stockPage">
+        <h1>Stock Management</h1>
+        <form id="stockForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="date_consumed">Date Consumed</label>
+            <input type="date" id="date_consumed" name="date_consumed" required>
+
+            <label for="item_name">Item Name</label>
+            <select id="item_name" name="item_name" required>
+                <option value="" disabled selected>Select an item</option>
+                <option value="Blue H609">Blue H609</option>
+<option value="Blue H618">Blue H618</option>
+<option value="Blue H694">Blue H694</option>
+<option value="Blue H713">Blue H713</option>
+<option value="Blue H794">Blue H794</option>
+<option value="Blue H797">Blue H797</option>
+<option value="Blue H825">Blue H825</option>
+<option value="Blue H8652 ">Blue H8652 </option>
+<option value="Blue H866">Blue H866</option>
+<option value="Blue H893">Blue H893</option>
+<option value="Brown H867">Brown H867</option>
+<option value="Green AFX12422">Green AFX12422</option>
+<option value="Green H399">Green H399</option>
+<option value="Green H453">Green H453</option>
+<option value="Green H1101">Green H1101</option>
+<option value="Green H669">Green H669</option>
+<option value="Green H770">Green H770</option>
+<option value="Green H773">Green H773</option>
+<option value="Green H787">Green H787</option>
+<option value="Green H8653">Green H8653</option>
+<option value="Green H 351">Green H 351</option>
+<option value="Grey H813">Grey H813</option>
+<option value="Grey H831">Grey H831</option>
+<option value="Maroon H793">Maroon H793</option>
+<option value="Orange H852">Orange H852</option>
+<option value="Purple H454">Purple H454</option>
+<option value="Purple H565">Purple H565</option>
+<option value="Purple H818">Purple H818</option>
+<option value="Red H225">Red H225</option>
+<option value="Red H331">Red H331</option>
+<option value="Red H337">Red H337</option>
+<option value="Red H435">Red H435</option>
+<option value="Red H567">Red H567</option>
+<option value="Red H712">Red H712</option>
+<option value="Red H791">Red H791</option>
+<option value="Red H792">Red H792</option>
+<option value="Red H816">Red H816</option>
+<option value="Red H823">Red H823</option>
+<option value="Red H853">Red H853</option>
+<option value="Red H8654">Red H8654</option>
+<option value="Red H865">Red H865</option>
+<option value="Red H892">Red H892</option>
+<option value="Purple H365">Purple H365</option>
+<option value="White  E314">White  E314</option>
+<option value="Yellow H1130">Yellow H1130</option>
+<option value="Yellow H864">Yellow H864</option>
+<option value="Green H939">Green H939</option>
+<option value="Brown H897">Brown H897</option>
+<option value="Green H414">Green H414</option>
+<option value="Holcim Black H935">Holcim Black H935</option>
+<option value="Blue H934">Blue H934</option>
+<option value="Blue H1136">Blue H1136</option>
+<option value="Grey H937">Grey H937</option>
+<option value="Red H938">Red H938</option>
+<option value="WB HI Opacity White Base">WB HI Opacity White Base</option>
+<option value="Green H25">Green H25</option>
+<option value="Blue H913">Blue H913</option>
+<option value="Red H912">Red H912</option>
+<option value="DK Green H917">DK Green H917</option>
+<option value="Blue H478">Blue H478</option>
+<option value="Pink H696">Pink H696</option>
+<option value="Brown H1138">Brown H1138</option>
+<option value="Orange H1139">Orange H1139</option>
+<option value="Red H1140">Red H1140</option>
+<option value="Blue H1141">Blue H1141</option>
+<option value="Blue H726">Blue H726</option>
+<option value="Red H422">Red H422</option>
+<option value="Green H1096">Green H1096</option>
+<option value="Red H463">Red H463</option>
+<option value="Blue H464">Blue H464</option>
+<option value="Green H681">Green H681</option>
+<option value="Green H1046">Green H1046</option>
+<option value="Yellow H820">Yellow H820</option>
+<option value="Red H871">Red H871</option>
+<option value="Green H876">Green H876</option>
+<option value="Blue H874">Blue H874</option>
+<option value="Grey H885">Grey H885</option>
+<option value="Green H611">Green H611</option>
+<option value="Green H884">Green H884</option>
+<option value="RED H1085">RED H1085</option>
+<option value="BLUE H1086">BLUE H1086</option>
+<option value="BLUE H862">BLUE H862</option>
+<option value="GREEN H795">GREEN H795</option>
+<option value="ANTIFOAM">ANTIFOAM</option>
+<option value="GREEN H924">GREEN H924</option>
+                <option value="others">Others</option>
+            </select>
+
+            <label for="stock_in">Stock IN</label>
+            <input type="number" id="stock_in" name="stock_in" placeholder="Enter stock in" min="0">
+
+            <label for="stock_out">Stock OUT</label>
+            <input type="number" id="stock_out" name="stock_out" placeholder="Enter stock out" min="0">
+
+            <label for="machine">Machine</label>
+            <select id="machine " name="machine" required>
+                <option value="" disabled selected>Select an machine</option>
+                <option value="tuber line 1">TUBER LINE 1</option>
+                <option value="tuber line 2">TUBER LINE 2</option>
+                <option value="bottomer line 1">BOTTOMER LINE 1</option>
+                <option value="bottomer line 2">BOTTOMER LINE 2</option>
+                <option value="ink dispenser">INK DISPENSER</option>
+                <option value="others">Others</option>
+            </select>
+
+            <label for="remark">Reason</label>
+            <input type="text" id="remark" name="remark" placeholder="Enter reason">
+
+            <button type="submit">Submit</button>
+        </form>
+        <div class="message" id="responseMessage"></div>
+    </section>
+
+    <script>
+        const loginPage = document.getElementById('loginPage');
+        const stockPage = document.getElementById('stockPage');
+
+        // Display login page by default
+        loginPage.style.display = 'block';
+
+        // Login logic
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === 'prod' && password === '123') {
+                loginPage.style.display = 'none';
+                stockPage.style.display = 'block';
+            } else {
+                const loginMessage = document.getElementById('loginMessage');
+                loginMessage.textContent = 'Invalid username or password!';
+                loginMessage.style.color = 'red';
+            }
+        });
+
+        // Stock management logic
+        document.getElementById('stockForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const scriptUrl = 'https://script.google.com/macros/s/AKfycbwqlXGBHaqJvqRzvyvhHRQTp82r4T1t3nGoDFF9ZJNBUKjLw7kVKjtYNagjdTxNt7S7Mw/exec';
+
+            fetch(scriptUrl, {
+                method: 'POST',
+                body: new URLSearchParams(formData).toString(),
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+            })
+            .then(response => response.text())
+            .then(data => {
+                const responseMessage = document.getElementById('responseMessage');
+                responseMessage.textContent = 'Data submitted successfully!';
+                responseMessage.style.color = '#4CAF50';
+                event.target.reset();
+            })
+            .catch(error => {
+                const responseMessage = document.getElementById('responseMessage');
+                responseMessage.textContent = `Error: ${error}`;
+                responseMessage.style.color = 'red';
+            });
+        });
+    </script>
+
+</body>
+</html>
